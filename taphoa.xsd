@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/taphoa"
+           xmlns="http://www.example.com/taphoa"
+           elementFormDefault="qualified">
+
+    <!-- Root -->
+    <xs:element name="taphoa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NHACUNGCAP" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaNCC" type="xs:string"/>
+                            <xs:element name="TenNCC" type="xs:string"/>
+                            <xs:element name="DiaChi" type="xs:string"/>
+                            <xs:element name="SDT" type="xs:string"/>
+                            <xs:element name="Email" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="DANHMUC" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaDanhMuc" type="xs:string"/>
+                            <xs:element name="TenDanhMuc" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="SANPHAM" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaSP" type="xs:string"/>
+                            <xs:element name="TenSanPham" type="xs:string"/>
+                            <xs:element name="DonViTinh" type="xs:string"/>
+                            <xs:element name="GiaBan" type="xs:decimal"/>
+                            <xs:element name="SoLuongTon" type="xs:integer"/>
+                            <xs:element name="MaDanhMuc" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="KHACHHANG" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaKH" type="xs:string"/>
+                            <xs:element name="TenKH" type="xs:string"/>
+                            <xs:element name="SDT" type="xs:string"/>
+                            <xs:element name="DiaChi" type="xs:string"/>
+                            <xs:element name="DiemTichLuy" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="NHANVIEN" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaNV" type="xs:string"/>
+                            <xs:element name="TenNV" type="xs:string"/>
+                            <xs:element name="NgaySinh" type="xs:date"/>
+                            <xs:element name="ChucVu" type="xs:string"/>
+                            <xs:element name="SDT" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="PHIEUNHAP" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaPhieuNhap" type="xs:string"/>
+                            <xs:element name="NgayNhap" type="xs:date"/>
+                            <xs:element name="TongTien" type="xs:decimal"/>
+                            <xs:element name="MaNCC" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="HOADONBAN" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaHD" type="xs:string"/>
+                            <xs:element name="NgayLap" type="xs:date"/>
+                            <xs:element name="TongTien" type="xs:decimal"/>
+                            <xs:element name="MaKH" type="xs:string"/>
+                            <xs:element name="MaNV" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="CT_PHIEUNHAP" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaPhieuNhap" type="xs:string"/>
+                            <xs:element name="MaSP" type="xs:string"/>
+                            <xs:element name="SoLuong" type="xs:integer"/>
+                            <xs:element name="DonGia" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="CT_HOADONBAN" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaHD" type="xs:string"/>
+                            <xs:element name="MaSP" type="xs:string"/>
+                            <xs:element name="SoLuong" type="xs:integer"/>
+                            <xs:element name="DonGia" type="xs:decimal"/>
+                            <xs:element name="ThanhTien" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- Khóa chính -->
+        <xs:unique name="unique_NCC">
+            <xs:selector xpath="NHACUNGCAP"/>
+            <xs:field xpath="MaNCC"/>
+        </xs:unique>
+
+        <xs:unique name="unique_DM">
+            <xs:selector xpath="DANHMUC"/>
+            <xs:field xpath="MaDanhMuc"/>
+        </xs:unique>
+
+        <xs:unique name="unique_SP">
+            <xs:selector xpath="SANPHAM"/>
+            <xs:field xpath="MaSP"/>
+        </xs:unique>
+
+        <xs:unique name="unique_KH">
+            <xs:selector xpath="KHACHHANG"/>
+            <xs:field xpath="MaKH"/>
+        </xs:unique>
+
+        <xs:unique name="unique_NV">
+            <xs:selector xpath="NHANVIEN"/>
+            <xs:field xpath="MaNV"/>
+        </xs:unique>
+
+        <xs:unique name="unique_PN">
+            <xs:selector xpath="PHIEUNHAP"/>
+            <xs:field xpath="MaPhieuNhap"/>
+        </xs:unique>
+
+        <xs:unique name="unique_HD">
+            <xs:selector xpath="HOADONBAN"/>
+            <xs:field xpath="MaHD"/>
+        </xs:unique>
+
+        <!-- Khóa ngoại -->
+        <xs:keyref name="FK_SP_DM" refer="unique_DM">
+            <xs:selector xpath="SANPHAM"/>
+            <xs:field xpath="MaDanhMuc"/>
+        </xs:keyref>
+
+        <xs:keyref name="FK_PN_NCC" refer="unique_NCC">
+            <xs:selector xpath="PHIEUNHAP"/>
+            <xs:field xpath="MaNCC"/>
+        </xs:keyref>
+
+        <xs:keyref name="FK_HD_KH" refer="unique_KH">
+            <xs:selector xpath="HOADONBAN"/>
+            <xs:field xpath="MaKH"/>
+        </xs:keyref>
+
+        <xs:keyref name="FK_HD_NV" refer="unique_NV">
+            <xs:selector xpath="HOADONBAN"/>
+            <xs:field xpath="MaNV"/>
+        </xs:keyref>
+
+        <xs:keyref name="FK_CTPN_PN" refer="unique_PN">
+            <xs:selector xpath="CT_PHIEUNHAP"/>
+            <xs:field xpath="MaPhieuNhap"/>
+        </xs:keyref>
+
+        <xs:keyref name="FK_CTPN_SP" refer="unique_SP">
+            <xs:selector xpath="CT_PHIEUNHAP"/>
+            <xs:field xpath="MaSP"/>
+        </xs:keyref>
+
+        <xs:keyref name="FK_CTHD_HD" refer="unique_HD">
+            <xs:selector xpath="CT_HOADONBAN"/>
+            <xs:field xpath="MaHD"/>
+        </xs:keyref>
+
+        <xs:keyref name="FK_CTHD_SP" refer="unique_SP">
+            <xs:selector xpath="CT_HOADONBAN"/>
+            <xs:field xpath="MaSP"/>
+        </xs:keyref>
+
+    </xs:element>
+</xs:schema>

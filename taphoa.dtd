@@ -1,0 +1,57 @@
+
+<!-- Phần tử gốc Database -->
+<!ELEMENT taphoa (NHACUNGCAP*, DANHMUC*, SANPHAM*, KHACHHANG*, NHANVIEN*, PHIEUNHAP*, HOADONBAN*, CT_PHIEUNHAP*, CT_HOADONBAN*)>
+
+<!-- Định nghĩa thực thể NHACUNGCAP -->
+<!ELEMENT NHACUNGCAP (MaNCC, TenNCC, DiaChi, SDT, Email)>
+<!ELEMENT MaNCC (#PCDATA)>
+<!ELEMENT TenNCC (#PCDATA)>
+<!ELEMENT DiaChi (#PCDATA)>
+<!ELEMENT SDT (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+
+<!-- Định nghĩa thực thể DANHMUC -->
+<!ELEMENT DANHMUC (MaDanhMuc, TenDanhMuc)>
+<!ELEMENT MaDanhMuc (#PCDATA)>
+<!ELEMENT TenDanhMuc (#PCDATA)>
+
+<!-- Định nghĩa thực thể SANPHAM -->
+<!ELEMENT SANPHAM (MaSP, TenSanPham, DonViTinh, GiaBan, SoLuongTon, MaDanhMuc)>
+<!ELEMENT MaSP (#PCDATA)>
+<!ELEMENT TenSanPham (#PCDATA)>
+<!ELEMENT DonViTinh (#PCDATA)>
+<!ELEMENT GiaBan (#PCDATA)>
+<!ELEMENT SoLuongTon (#PCDATA)>
+
+<!-- Định nghĩa thực thể KHACHHANG -->
+<!ELEMENT KHACHHANG (MaKH, TenKH, SDT, DiaChi, DiemTichLuy)>
+<!ELEMENT MaKH (#PCDATA)>
+<!ELEMENT TenKH (#PCDATA)>
+<!ELEMENT DiemTichLuy (#PCDATA)>
+
+<!-- Định nghĩa thực thể NHANVIEN -->
+<!ELEMENT NHANVIEN (MaNV, TenNV, NgaySinh, ChucVu, SDT)>
+<!ELEMENT MaNV (#PCDATA)>
+<!ELEMENT TenNV (#PCDATA)>
+<!ELEMENT NgaySinh (#PCDATA)>
+<!ELEMENT ChucVu (#PCDATA)>
+
+<!-- Định nghĩa thực thể PHIEUNHAP -->
+<!ELEMENT PHIEUNHAP (MaPhieuNhap, NgayNhap, TongTien, MaNCC)>
+<!ELEMENT MaPhieuNhap (#PCDATA)>
+<!ELEMENT NgayNhap (#PCDATA)>
+<!ELEMENT TongTien (#PCDATA)>
+
+<!-- Định nghĩa thực thể HOADONBAN -->
+<!ELEMENT HOADONBAN (MaHD, NgayLap, TongTien, MaKH, MaNV)>
+<!ELEMENT MaHD (#PCDATA)>
+<!ELEMENT NgayLap (#PCDATA)>
+
+<!-- Định nghĩa thực thể CT_PHIEUNHAP -->
+<!ELEMENT CT_PHIEUNHAP (MaPhieuNhap, MaSP, SoLuong, DonGia)>
+<!ELEMENT SoLuong (#PCDATA)>
+<!ELEMENT DonGia (#PCDATA)>
+
+<!-- Định nghĩa thực thể CT_HOADONBAN -->
+<!ELEMENT CT_HOADONBAN (MaHD, MaSP, SoLuong, DonGia, ThanhTien)>
+<!ELEMENT ThanhTien (#PCDATA)>
