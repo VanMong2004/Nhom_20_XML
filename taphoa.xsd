@@ -1,195 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.example.com/taphoa"
-           xmlns="http://www.example.com/taphoa"
-           elementFormDefault="qualified">
+    targetNamespace="http://www.example.com/taphoa"
+    xmlns="http://www.example.com/taphoa"
+    elementFormDefault="qualified">
 
-    <!-- Root -->
+    <!-- ====== SIMPLE TYPES ====== -->
+    <xs:simpleType name="MaType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3" />
+            <xs:maxLength value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TenType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3" />
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SDTType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="0[0-9]{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GiaType">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="1000" />
+            <xs:maxInclusive value="1000000000"/> <!-- Tối đa 1 tỷ -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SoLuongType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="10000" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- ====== ROOT ELEMENT ====== -->
     <xs:element name="taphoa">
         <xs:complexType>
             <xs:sequence>
+
+                <!-- NHÀ CUNG CẤP -->
                 <xs:element name="NHACUNGCAP" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaNCC" type="xs:string"/>
-                            <xs:element name="TenNCC" type="xs:string"/>
-                            <xs:element name="DiaChi" type="xs:string"/>
-                            <xs:element name="SDT" type="xs:string"/>
-                            <xs:element name="Email" type="xs:string"/>
+                            <xs:element name="MaNCC" type="MaType" />
+                            <xs:element name="TenNCC" type="TenType" />
+                            <xs:element name="DiaChi" type="xs:string" />
+                            <xs:element name="SDT" type="SDTType" />
+                            <xs:element name="Email" type="EmailType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- DANH MỤC -->
                 <xs:element name="DANHMUC" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaDanhMuc" type="xs:string"/>
-                            <xs:element name="TenDanhMuc" type="xs:string"/>
+                            <xs:element name="MaDanhMuc" type="MaType" />
+                            <xs:element name="TenDanhMuc" type="TenType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- SẢN PHẨM -->
                 <xs:element name="SANPHAM" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaSP" type="xs:string"/>
-                            <xs:element name="TenSanPham" type="xs:string"/>
-                            <xs:element name="DonViTinh" type="xs:string"/>
-                            <xs:element name="GiaBan" type="xs:decimal"/>
-                            <xs:element name="SoLuongTon" type="xs:integer"/>
-                            <xs:element name="MaDanhMuc" type="xs:string"/>
+                            <xs:element name="MaSP" type="MaType" />
+                            <xs:element name="TenSanPham" type="TenType" />
+                            <xs:element name="DonViTinh" type="xs:string" />
+                            <xs:element name="GiaBan" type="GiaType" />
+                            <xs:element name="SoLuongTon" type="SoLuongType" />
+                            <xs:element name="MaDanhMuc" type="MaType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- KHÁCH HÀNG -->
                 <xs:element name="KHACHHANG" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaKH" type="xs:string"/>
-                            <xs:element name="TenKH" type="xs:string"/>
-                            <xs:element name="SDT" type="xs:string"/>
-                            <xs:element name="DiaChi" type="xs:string"/>
-                            <xs:element name="DiemTichLuy" type="xs:integer"/>
+                            <xs:element name="MaKH" type="MaType" />
+                            <xs:element name="TenKH" type="TenType" />
+                            <xs:element name="SDT" type="SDTType" />
+                            <xs:element name="DiaChi" type="xs:string" />
+                            <xs:element name="DiemTichLuy" type="SoLuongType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- NHÂN VIÊN -->
                 <xs:element name="NHANVIEN" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaNV" type="xs:string"/>
-                            <xs:element name="TenNV" type="xs:string"/>
-                            <xs:element name="NgaySinh" type="xs:date"/>
-                            <xs:element name="ChucVu" type="xs:string"/>
-                            <xs:element name="SDT" type="xs:string"/>
+                            <xs:element name="MaNV" type="MaType" />
+                            <xs:element name="TenNV" type="TenType" />
+                            <xs:element name="NgaySinh" type="xs:date" />
+                            <xs:element name="ChucVu" type="xs:string" />
+                            <xs:element name="SDT" type="SDTType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- PHIẾU NHẬP -->
                 <xs:element name="PHIEUNHAP" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaPhieuNhap" type="xs:string"/>
-                            <xs:element name="NgayNhap" type="xs:date"/>
-                            <xs:element name="TongTien" type="xs:decimal"/>
-                            <xs:element name="MaNCC" type="xs:string"/>
+                            <xs:element name="MaPhieuNhap" type="MaType" />
+                            <xs:element name="NgayNhap" type="xs:date" />
+                            <xs:element name="TongTien" type="GiaType" />
+                            <xs:element name="MaNCC" type="MaType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- HÓA ĐƠN BÁN -->
                 <xs:element name="HOADONBAN" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaHD" type="xs:string"/>
-                            <xs:element name="NgayLap" type="xs:date"/>
-                            <xs:element name="TongTien" type="xs:decimal"/>
-                            <xs:element name="MaKH" type="xs:string"/>
-                            <xs:element name="MaNV" type="xs:string"/>
+                            <xs:element name="MaHD" type="MaType" />
+                            <xs:element name="NgayLap" type="xs:date" />
+                            <xs:element name="TongTien" type="GiaType" />
+                            <xs:element name="MaKH" type="MaType" />
+                            <xs:element name="MaNV" type="MaType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- CHI TIẾT PHIẾU NHẬP -->
                 <xs:element name="CT_PHIEUNHAP" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaPhieuNhap" type="xs:string"/>
-                            <xs:element name="MaSP" type="xs:string"/>
-                            <xs:element name="SoLuong" type="xs:integer"/>
-                            <xs:element name="DonGia" type="xs:decimal"/>
+                            <xs:element name="MaPhieuNhap" type="MaType" />
+                            <xs:element name="MaSP" type="MaType" />
+                            <xs:element name="SoLuong" type="SoLuongType" />
+                            <xs:element name="DonGia" type="GiaType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- CHI TIẾT HÓA ĐƠN BÁN -->
                 <xs:element name="CT_HOADONBAN" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="MaHD" type="xs:string"/>
-                            <xs:element name="MaSP" type="xs:string"/>
-                            <xs:element name="SoLuong" type="xs:integer"/>
-                            <xs:element name="DonGia" type="xs:decimal"/>
-                            <xs:element name="ThanhTien" type="xs:decimal"/>
+                            <xs:element name="MaHD" type="MaType" />
+                            <xs:element name="MaSP" type="MaType" />
+                            <xs:element name="SoLuong" type="SoLuongType" />
+                            <xs:element name="DonGia" type="GiaType" />
+                            <xs:element name="ThanhTien" type="GiaType" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
             </xs:sequence>
         </xs:complexType>
 
-        <!-- Khóa chính -->
-        <xs:unique name="unique_NCC">
-            <xs:selector xpath="NHACUNGCAP"/>
-            <xs:field xpath="MaNCC"/>
-        </xs:unique>
+        <!-- ====== KHÓA CHÍNH ====== -->
+        <xs:key name="key_NCC">
+            <xs:selector xpath="NHACUNGCAP" />
+            <xs:field xpath="MaNCC" />
+        </xs:key>
 
-        <xs:unique name="unique_DM">
-            <xs:selector xpath="DANHMUC"/>
-            <xs:field xpath="MaDanhMuc"/>
-        </xs:unique>
+        <xs:key name="key_DM">
+            <xs:selector xpath="DANHMUC" />
+            <xs:field xpath="MaDanhMuc" />
+        </xs:key>
 
-        <xs:unique name="unique_SP">
-            <xs:selector xpath="SANPHAM"/>
-            <xs:field xpath="MaSP"/>
-        </xs:unique>
+        <xs:key name="key_SP">
+            <xs:selector xpath="SANPHAM" />
+            <xs:field xpath="MaSP" />
+        </xs:key>
 
-        <xs:unique name="unique_KH">
-            <xs:selector xpath="KHACHHANG"/>
-            <xs:field xpath="MaKH"/>
-        </xs:unique>
+        <xs:key name="key_KH">
+            <xs:selector xpath="KHACHHANG" />
+            <xs:field xpath="MaKH" />
+        </xs:key>
 
-        <xs:unique name="unique_NV">
-            <xs:selector xpath="NHANVIEN"/>
-            <xs:field xpath="MaNV"/>
-        </xs:unique>
+        <xs:key name="key_NV">
+            <xs:selector xpath="NHANVIEN" />
+            <xs:field xpath="MaNV" />
+        </xs:key>
 
-        <xs:unique name="unique_PN">
-            <xs:selector xpath="PHIEUNHAP"/>
-            <xs:field xpath="MaPhieuNhap"/>
-        </xs:unique>
+        <xs:key name="key_PN">
+            <xs:selector xpath="PHIEUNHAP" />
+            <xs:field xpath="MaPhieuNhap" />
+        </xs:key>
 
-        <xs:unique name="unique_HD">
-            <xs:selector xpath="HOADONBAN"/>
-            <xs:field xpath="MaHD"/>
-        </xs:unique>
+        <xs:key name="key_HD">
+            <xs:selector xpath="HOADONBAN" />
+            <xs:field xpath="MaHD" />
+        </xs:key>
 
-        <!-- Khóa ngoại -->
-        <xs:keyref name="FK_SP_DM" refer="unique_DM">
-            <xs:selector xpath="SANPHAM"/>
-            <xs:field xpath="MaDanhMuc"/>
+        <!-- ====== KHÓA NGOẠI ====== -->
+        <xs:keyref name="FK_SP_DM" refer="key_DM">
+            <xs:selector xpath="SANPHAM" />
+            <xs:field xpath="MaDanhMuc" />
         </xs:keyref>
 
-        <xs:keyref name="FK_PN_NCC" refer="unique_NCC">
-            <xs:selector xpath="PHIEUNHAP"/>
-            <xs:field xpath="MaNCC"/>
+        <xs:keyref name="FK_PN_NCC" refer="key_NCC">
+            <xs:selector xpath="PHIEUNHAP" />
+            <xs:field xpath="MaNCC" />
         </xs:keyref>
 
-        <xs:keyref name="FK_HD_KH" refer="unique_KH">
-            <xs:selector xpath="HOADONBAN"/>
-            <xs:field xpath="MaKH"/>
+        <xs:keyref name="FK_HD_KH" refer="key_KH">
+            <xs:selector xpath="HOADONBAN" />
+            <xs:field xpath="MaKH" />
         </xs:keyref>
 
-        <xs:keyref name="FK_HD_NV" refer="unique_NV">
-            <xs:selector xpath="HOADONBAN"/>
-            <xs:field xpath="MaNV"/>
+        <xs:keyref name="FK_HD_NV" refer="key_NV">
+            <xs:selector xpath="HOADONBAN" />
+            <xs:field xpath="MaNV" />
         </xs:keyref>
 
-        <xs:keyref name="FK_CTPN_PN" refer="unique_PN">
-            <xs:selector xpath="CT_PHIEUNHAP"/>
-            <xs:field xpath="MaPhieuNhap"/>
+        <xs:keyref name="FK_CTPN_PN" refer="key_PN">
+            <xs:selector xpath="CT_PHIEUNHAP" />
+            <xs:field xpath="MaPhieuNhap" />
         </xs:keyref>
 
-        <xs:keyref name="FK_CTPN_SP" refer="unique_SP">
-            <xs:selector xpath="CT_PHIEUNHAP"/>
-            <xs:field xpath="MaSP"/>
+        <xs:keyref name="FK_CTPN_SP" refer="key_SP">
+            <xs:selector xpath="CT_PHIEUNHAP" />
+            <xs:field xpath="MaSP" />
         </xs:keyref>
 
-        <xs:keyref name="FK_CTHD_HD" refer="unique_HD">
-            <xs:selector xpath="CT_HOADONBAN"/>
-            <xs:field xpath="MaHD"/>
+        <xs:keyref name="FK_CTHD_HD" refer="key_HD">
+            <xs:selector xpath="CT_HOADONBAN" />
+            <xs:field xpath="MaHD" />
         </xs:keyref>
 
-        <xs:keyref name="FK_CTHD_SP" refer="unique_SP">
-            <xs:selector xpath="CT_HOADONBAN"/>
-            <xs:field xpath="MaSP"/>
+        <xs:keyref name="FK_CTHD_SP" refer="key_SP">
+            <xs:selector xpath="CT_HOADONBAN" />
+            <xs:field xpath="MaSP" />
         </xs:keyref>
-
     </xs:element>
 </xs:schema>
