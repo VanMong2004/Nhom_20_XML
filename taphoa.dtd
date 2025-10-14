@@ -22,7 +22,7 @@
 <!ELEMENT DonViTinh (#PCDATA)>
 <!ELEMENT GiaBan (#PCDATA)>
 <!ELEMENT SoLuongTon (#PCDATA)>
-
+ 
 <!-- Định nghĩa thực thể KHACHHANG -->
 <!ELEMENT KHACHHANG (MaKH, TenKH, SDT, DiaChi, DiemTichLuy)>
 <!ELEMENT MaKH (#PCDATA)>
