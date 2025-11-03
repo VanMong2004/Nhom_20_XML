@@ -1,0 +1,458 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/taphoa.json",
+  "title": "Tạp Hóa Management System",
+  "description": "Schema cho hệ thống quản lý cửa hàng tạp hóa - Đồng bộ với XML Schema",
+  "type": "object",
+  "required": ["taphoa"],
+  "properties": {
+    "taphoa": {
+      "type": "object",
+      "description": "Đối tượng chứa toàn bộ dữ liệu của hệ thống tạp hóa",
+      "required": [
+        "NHACUNGCAP",
+        "DANHMUC",
+        "SANPHAM",
+        "KHACHHANG",
+        "NHANVIEN",
+        "PHIEUNHAP",
+        "HOADONBAN",
+        "CT_PHIEUNHAP",
+        "CT_HOADONBAN"
+      ],
+      "properties": {
+        "NHACUNGCAP": {
+          "type": "array",
+          "description": "Danh sách nhà cung cấp",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaNCC", "TenNCC", "DiaChi", "SDT", "Email"],
+            "properties": {
+              "MaNCC": {
+                "type": "string",
+                "description": "Mã nhà cung cấp (Primary Key)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["NCC001", "NCC002"]
+              },
+              "TenNCC": {
+                "type": "string",
+                "description": "Tên nhà cung cấp",
+                "minLength": 3,
+                "maxLength": 50,
+                "examples": ["Công ty TNHH Thực phẩm Việt Nam"]
+              },
+              "DiaChi": {
+                "type": "string",
+                "description": "Địa chỉ nhà cung cấp",
+                "minLength": 1,
+                "examples": ["123 Nguyễn Văn Linh, Quận 7, TP.HCM"]
+              },
+              "SDT": {
+                "type": "string",
+                "description": "Số điện thoại (10 chữ số bắt đầu bằng 0)",
+                "pattern": "^0[0-9]{9}$",
+                "examples": ["02838456789", "0908123456"]
+              },
+              "Email": {
+                "type": "string",
+                "description": "Email liên hệ",
+                "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                "examples": ["contact@thucphamviet.com"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "DANHMUC": {
+          "type": "array",
+          "description": "Danh sách danh mục sản phẩm",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaDanhMuc", "TenDanhMuc"],
+            "properties": {
+              "MaDanhMuc": {
+                "type": "string",
+                "description": "Mã danh mục (Primary Key)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["DM001", "DM002"]
+              },
+              "TenDanhMuc": {
+                "type": "string",
+                "description": "Tên danh mục",
+                "minLength": 3,
+                "maxLength": 50,
+                "examples": ["Thực phẩm", "Đồ uống", "Điện gia dụng"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "SANPHAM": {
+          "type": "array",
+          "description": "Danh sách sản phẩm",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaSP", "TenSanPham", "DonViTinh", "GiaBan", "SoLuongTon", "MaDanhMuc"],
+            "properties": {
+              "MaSP": {
+                "type": "string",
+                "description": "Mã sản phẩm (Primary Key)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["SP001", "SP002"]
+              },
+              "TenSanPham": {
+                "type": "string",
+                "description": "Tên sản phẩm",
+                "minLength": 3,
+                "maxLength": 50,
+                "examples": ["Gạo ST25 5kg", "Nước suối Lavie 500ml"]
+              },
+              "DonViTinh": {
+                "type": "string",
+                "description": "Đơn vị tính",
+                "minLength": 1,
+                "examples": ["Bao", "Thùng", "Cái", "Hộp", "Thỏi"]
+              },
+              "GiaBan": {
+                "type": "number",
+                "description": "Giá bán (VNĐ) - từ 1,000 đến 1 tỷ",
+                "minimum": 1000,
+                "maximum": 1000000000,
+                "examples": [250000, 80000, 850000]
+              },
+              "SoLuongTon": {
+                "type": "integer",
+                "description": "Số lượng tồn kho - từ 0 đến 10,000",
+                "minimum": 0,
+                "maximum": 10000,
+                "examples": [150, 500, 45]
+              },
+              "MaDanhMuc": {
+                "type": "string",
+                "description": "Mã danh mục (Foreign Key -> DANHMUC.MaDanhMuc)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["DM001", "DM002"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "KHACHHANG": {
+          "type": "array",
+          "description": "Danh sách khách hàng",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaKH", "TenKH", "SDT", "DiaChi", "DiemTichLuy"],
+            "properties": {
+              "MaKH": {
+                "type": "string",
+                "description": "Mã khách hàng (Primary Key)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["KH001", "KH002"]
+              },
+              "TenKH": {
+                "type": "string",
+                "description": "Tên khách hàng",
+                "minLength": 3,
+                "maxLength": 50,
+                "examples": ["Nguyễn Thị Mai", "Trần Văn Nam"]
+              },
+              "SDT": {
+                "type": "string",
+                "description": "Số điện thoại (10 chữ số bắt đầu bằng 0)",
+                "pattern": "^0[0-9]{9}$",
+                "examples": ["0908123456", "0909234567"]
+              },
+              "DiaChi": {
+                "type": "string",
+                "description": "Địa chỉ khách hàng",
+                "minLength": 1,
+                "examples": ["12 Lê Văn Việt, Quận 9, TP.HCM"]
+              },
+              "DiemTichLuy": {
+                "type": "integer",
+                "description": "Điểm tích lũy - từ 0 đến 10,000",
+                "minimum": 0,
+                "maximum": 10000,
+                "examples": [120, 85, 250]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "NHANVIEN": {
+          "type": "array",
+          "description": "Danh sách nhân viên",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaNV", "TenNV", "NgaySinh", "ChucVu", "SDT"],
+            "properties": {
+              "MaNV": {
+                "type": "string",
+                "description": "Mã nhân viên (Primary Key)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["NV001", "NV002"]
+              },
+              "TenNV": {
+                "type": "string",
+                "description": "Tên nhân viên",
+                "minLength": 3,
+                "maxLength": 50,
+                "examples": ["Nguyễn Văn An", "Trần Thị Bình"]
+              },
+              "NgaySinh": {
+                "type": "string",
+                "description": "Ngày sinh (định dạng YYYY-MM-DD)",
+                "format": "date",
+                "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+                "examples": ["1990-05-15", "1992-08-20"]
+              },
+              "ChucVu": {
+                "type": "string",
+                "description": "Chức vụ",
+                "minLength": 1,
+                "examples": ["Quản lý", "Nhân viên bán hàng", "Kế toán", "Thủ kho"]
+              },
+              "SDT": {
+                "type": "string",
+                "description": "Số điện thoại (10 chữ số bắt đầu bằng 0)",
+                "pattern": "^0[0-9]{9}$",
+                "examples": ["0903123456", "0903987654"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "PHIEUNHAP": {
+          "type": "array",
+          "description": "Danh sách phiếu nhập hàng",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaPhieuNhap", "NgayNhap", "TongTien", "MaNCC"],
+            "properties": {
+              "MaPhieuNhap": {
+                "type": "string",
+                "description": "Mã phiếu nhập (Primary Key)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["PN001", "PN002"]
+              },
+              "NgayNhap": {
+                "type": "string",
+                "description": "Ngày nhập hàng (định dạng YYYY-MM-DD)",
+                "format": "date",
+                "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+                "examples": ["2024-01-05", "2024-01-08"]
+              },
+              "TongTien": {
+                "type": "number",
+                "description": "Tổng tiền nhập (VNĐ) - từ 1,000 đến 1 tỷ",
+                "minimum": 1000,
+                "maximum": 1000000000,
+                "examples": [20000000, 18000000]
+              },
+              "MaNCC": {
+                "type": "string",
+                "description": "Mã nhà cung cấp (Foreign Key -> NHACUNGCAP.MaNCC)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["NCC001", "NCC002"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "HOADONBAN": {
+          "type": "array",
+          "description": "Danh sách hóa đơn bán hàng",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaHD", "NgayLap", "TongTien", "MaKH", "MaNV"],
+            "properties": {
+              "MaHD": {
+                "type": "string",
+                "description": "Mã hóa đơn (Primary Key)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["HD001", "HD002"]
+              },
+              "NgayLap": {
+                "type": "string",
+                "description": "Ngày lập hóa đơn (định dạng YYYY-MM-DD)",
+                "format": "date",
+                "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+                "examples": ["2024-01-15", "2024-01-16"]
+              },
+              "TongTien": {
+                "type": "number",
+                "description": "Tổng tiền hóa đơn (VNĐ) - từ 1,000 đến 1 tỷ",
+                "minimum": 1000,
+                "maximum": 1000000000,
+                "examples": [740000, 6840000]
+              },
+              "MaKH": {
+                "type": "string",
+                "description": "Mã khách hàng (Foreign Key -> KHACHHANG.MaKH)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["KH001", "KH002"]
+              },
+              "MaNV": {
+                "type": "string",
+                "description": "Mã nhân viên (Foreign Key -> NHANVIEN.MaNV)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["NV002", "NV005"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "CT_PHIEUNHAP": {
+          "type": "array",
+          "description": "Chi tiết phiếu nhập hàng",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaPhieuNhap", "MaSP", "SoLuong", "DonGia"],
+            "properties": {
+              "MaPhieuNhap": {
+                "type": "string",
+                "description": "Mã phiếu nhập (Foreign Key -> PHIEUNHAP.MaPhieuNhap)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["PN001", "PN002"]
+              },
+              "MaSP": {
+                "type": "string",
+                "description": "Mã sản phẩm (Foreign Key -> SANPHAM.MaSP)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["SP001", "SP002"]
+              },
+              "SoLuong": {
+                "type": "integer",
+                "description": "Số lượng nhập - từ 0 đến 10,000",
+                "minimum": 0,
+                "maximum": 10000,
+                "examples": [100, 300, 20]
+              },
+              "DonGia": {
+                "type": "number",
+                "description": "Đơn giá nhập (VNĐ) - từ 1,000 đến 1 tỷ",
+                "minimum": 1000,
+                "maximum": 1000000000,
+                "examples": [200000, 60000, 700000]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "CT_HOADONBAN": {
+          "type": "array",
+          "description": "Chi tiết hóa đơn bán hàng",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["MaHD", "MaSP", "SoLuong", "DonGia", "ThanhTien"],
+            "properties": {
+              "MaHD": {
+                "type": "string",
+                "description": "Mã hóa đơn (Foreign Key -> HOADONBAN.MaHD)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["HD001", "HD002"]
+              },
+              "MaSP": {
+                "type": "string",
+                "description": "Mã sản phẩm (Foreign Key -> SANPHAM.MaSP)",
+                "minLength": 3,
+                "maxLength": 10,
+                "examples": ["SP001", "SP002"]
+              },
+              "SoLuong": {
+                "type": "integer",
+                "description": "Số lượng bán - từ 0 đến 10,000",
+                "minimum": 0,
+                "maximum": 10000,
+                "examples": [2, 3, 1]
+              },
+              "DonGia": {
+                "type": "number",
+                "description": "Đơn giá bán (VNĐ) - từ 1,000 đến 1 tỷ",
+                "minimum": 1000,
+                "maximum": 1000000000,
+                "examples": [250000, 80000, 5990000]
+              },
+              "ThanhTien": {
+                "type": "number",
+                "description": "Thành tiền (SoLuong * DonGia) - từ 1,000 đến 1 tỷ",
+                "minimum": 1000,
+                "maximum": 1000000000,
+                "examples": [500000, 240000, 5990000]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "MaType": {
+      "description": "Kiểu dữ liệu cho các mã định danh",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 10
+    },
+    "TenType": {
+      "description": "Kiểu dữ liệu cho tên",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 50
+    },
+    "SDTType": {
+      "description": "Kiểu dữ liệu cho số điện thoại (10 chữ số bắt đầu bằng 0)",
+      "type": "string",
+      "pattern": "^0[0-9]{9}$"
+    },
+    "EmailType": {
+      "description": "Kiểu dữ liệu cho email",
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    },
+    "GiaType": {
+      "description": "Kiểu dữ liệu cho giá tiền (VNĐ) - từ 1,000 đến 1 tỷ",
+      "type": "number",
+      "minimum": 1000,
+      "maximum": 1000000000
+    },
+    "SoLuongType": {
+      "description": "Kiểu dữ liệu cho số lượng - từ 0 đến 10,000",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000
+    },
+    "DateType": {
+      "description": "Kiểu dữ liệu cho ngày tháng (YYYY-MM-DD)",
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    }
+  }
+}

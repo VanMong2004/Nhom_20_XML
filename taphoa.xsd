@@ -126,7 +126,7 @@
                     </xs:complexType>
                 </xs:element>
 
-                <!-- HÓA ĐƠN BÁN -->
+                <!-- HÓBÁN -->
                 <xs:element name="HOADONBAN" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>

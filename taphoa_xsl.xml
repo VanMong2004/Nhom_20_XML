@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="taphoa.xsl"?>
+
+<taphoa>
+    <!-- Thực thể NHACUNGCAP -->
+    <NHACUNGCAP>
+        <MaNCC>NCC001</MaNCC>
+        <TenNCC>Công ty TNHH Thực phẩm Việt Nam</TenNCC>
+        <DiaChi>123 Nguyễn Văn Linh, Quận 7, TP.HCM</DiaChi>
+        <SDT>02838456789</SDT>
+        <Email>contact@thucphamviet.com</Email>
+    </NHACUNGCAP>
+    <NHACUNGCAP>
+        <MaNCC>NCC002</MaNCC>
+        <TenNCC>Công ty CP Nước giải khát Lavie</TenNCC>
+        <DiaChi>456 Lê Lợi, Quận 1, TP.HCM</DiaChi>
+        <SDT>02838765432</SDT>
+        <Email>info@lavie.com.vn</Email>
+    </NHACUNGCAP>
+    <NHACUNGCAP>
+        <MaNCC>NCC003</MaNCC>
+        <TenNCC>Công ty TNHH Điện gia dụng Sunhouse</TenNCC>
+        <DiaChi>789 Trần Hưng Đạo, Quận 5, TP.HCM</DiaChi>
+        <SDT>02839281726</SDT>
+        <Email>sales@sunhouse.com</Email>
+    </NHACUNGCAP>
+    <NHACUNGCAP>
+        <MaNCC>NCC004</MaNCC>
+        <TenNCC>Công ty CP Văn phòng phẩm Thiên Long</TenNCC>
+        <DiaChi>321 Cách Mạng Tháng 8, Quận 3, TP.HCM</DiaChi>
+        <SDT>02835463728</SDT>
+        <Email>office@thienlong.com</Email>
+    </NHACUNGCAP>
+    <NHACUNGCAP>
+        <MaNCC>NCC005</MaNCC>
+        <TenNCC>Công ty TNHH Điện tử Sony Việt Nam</TenNCC>
+        <DiaChi>654 Nguyễn Tri Phương, Quận 10, TP.HCM</DiaChi>
+        <SDT>02837654891</SDT>
+        <Email>support@sony.com.vn</Email>
+    </NHACUNGCAP>
+    <NHACUNGCAP>
+        <MaNCC>NCC006</MaNCC>
+        <TenNCC>Công ty CP Thời trang Việt</TenNCC>
+        <DiaChi>987 Lý Thường Kiệt, Quận 11, TP.HCM</DiaChi>
+        <SDT>02836547892</SDT>
+        <Email>fashion@vietfashion.com</Email>
+    </NHACUNGCAP>
+    <NHACUNGCAP>
+        <MaNCC>NCC007</MaNCC>
+        <TenNCC>Công ty TNHH Mỹ phẩm Maybelline</TenNCC>
+        <DiaChi>147 Phạm Văn Đồng, Thủ Đức, TP.HCM</DiaChi>
+        <SDT>02838910283</SDT>
+        <Email>beauty@maybelline.com.vn</Email>
+    </NHACUNGCAP>
+
+    <!-- Thực thể DANHMUC -->
+    <DANHMUC>
+        <MaDanhMuc>DM001</MaDanhMuc>
+        <TenDanhMuc>Thực phẩm</TenDanhMuc>
+    </DANHMUC>
+    <DANHMUC>
+        <MaDanhMuc>DM002</MaDanhMuc>
+        <TenDanhMuc>Đồ uống</TenDanhMuc>
+    </DANHMUC>
+    <DANHMUC>
+        <MaDanhMuc>DM003</MaDanhMuc>
+        <TenDanhMuc>Điện gia dụng</TenDanhMuc>
+    </DANHMUC>
+    <DANHMUC>
+        <MaDanhMuc>DM004</MaDanhMuc>
+        <TenDanhMuc>Văn phòng phẩm</TenDanhMuc>
+    </DANHMUC>
+    <DANHMUC>
+        <MaDanhMuc>DM005</MaDanhMuc>
+        <TenDanhMuc>Điện tử</TenDanhMuc>
+    </DANHMUC>
+    <DANHMUC>
+        <MaDanhMuc>DM006</MaDanhMuc>
+        <TenDanhMuc>Thời trang</TenDanhMuc>
+    </DANHMUC>
+    <DANHMUC>
+        <MaDanhMuc>DM007</MaDanhMuc>
+        <TenDanhMuc>Mỹ phẩm</TenDanhMuc>
+    </DANHMUC>
+
+    <!-- Thực thể SANPHAM -->
+    <SANPHAM>
+        <MaSP>SP001</MaSP>
+        <TenSanPham>Gạo ST25 5kg</TenSanPham>
+        <DonViTinh>Bao</DonViTinh>
+        <GiaBan>250000</GiaBan>
+        <SoLuongTon>150</SoLuongTon>
+        <MaDanhMuc>DM001</MaDanhMuc>
+    </SANPHAM>
+    <SANPHAM>
+        <MaSP>SP002</MaSP>
+        <TenSanPham>Nước suối Lavie 500ml</TenSanPham>
+        <DonViTinh>Thùng</DonViTinh>
+        <GiaBan>80000</GiaBan>
+        <SoLuongTon>500</SoLuongTon>
+        <MaDanhMuc>DM002</MaDanhMuc>
+    </SANPHAM>
+    <SANPHAM>
+        <MaSP>SP003</MaSP>
+        <TenSanPham>Nồi cơm điện Sunhouse 1.8L</TenSanPham>
+        <DonViTinh>Cái</DonViTinh>
+        <GiaBan>850000</GiaBan>
+        <SoLuongTon>45</SoLuongTon>
+        <MaDanhMuc>DM003</MaDanhMuc>
+    </SANPHAM>
+    <SANPHAM>
+        <MaSP>SP004</MaSP>
+        <TenSanPham>Bút bi Thiên Long 027</TenSanPham>
+        <DonViTinh>Hộp</DonViTinh>
+        <GiaBan>80000</GiaBan>
+        <SoLuongTon>1000</SoLuongTon>
+        <MaDanhMuc>DM004</MaDanhMuc>
+    </SANPHAM>
+    <SANPHAM>
+        <MaSP>SP005</MaSP>
+        <TenSanPham>Tai nghe Bluetooth Sony WH-1000XM4</TenSanPham>
+        <DonViTinh>Cái</DonViTinh>
+        <GiaBan>5990000</GiaBan>
+        <SoLuongTon>35</SoLuongTon>
+        <MaDanhMuc>DM005</MaDanhMuc>
+    </SANPHAM>
+    <SANPHAM>
+        <MaSP>SP006</MaSP>
+        <TenSanPham>Áo thun nam cổ tròn</TenSanPham>
+        <DonViTinh>Cái</DonViTinh>
+        <GiaBan>150000</GiaBan>
+        <SoLuongTon>120</SoLuongTon>
+        <MaDanhMuc>DM006</MaDanhMuc>
+    </SANPHAM>
+    <SANPHAM>
+        <MaSP>SP007</MaSP>
+        <TenSanPham>Son kem lì Maybelline Superstay</TenSanPham>
+        <DonViTinh>Thỏi</DonViTinh>
+        <GiaBan>249000</GiaBan>
+        <SoLuongTon>80</SoLuongTon>
+        <MaDanhMuc>DM007</MaDanhMuc>
+    </SANPHAM>
+
+    <!-- Thực thể KHACHHANG -->
+    <KHACHHANG>
+        <MaKH>KH001</MaKH>
+        <TenKH>Nguyễn Thị Mai</TenKH>
+        <SDT>0908123456</SDT>
+        <DiaChi>12 Lê Văn Việt, Quận 9, TP.HCM</DiaChi>
+        <DiemTichLuy>120</DiemTichLuy>
+    </KHACHHANG>
+    <KHACHHANG>
+        <MaKH>KH002</MaKH>
+        <TenKH>Trần Văn Nam</TenKH>
+        <SDT>0909234567</SDT>
+        <DiaChi>45 Hoàng Diệu, Quận 4, TP.HCM</DiaChi>
+        <DiemTichLuy>85</DiemTichLuy>
+    </KHACHHANG>
+    <KHACHHANG>
+        <MaKH>KH003</MaKH>
+        <TenKH>Lê Thị Hoa</TenKH>
+        <SDT>0907345678</SDT>
+        <DiaChi>78 Phan Văn Trị, Gò Vấp, TP.HCM</DiaChi>
+        <DiemTichLuy>250</DiemTichLuy>
+    </KHACHHANG>
+    <KHACHHANG>
+        <MaKH>KH004</MaKH>
+        <TenKH>Phạm Minh Tuấn</TenKH>
+        <SDT>0906456789</SDT>
+        <DiaChi>156 Nguyễn Thị Minh Khai, Quận 3, TP.HCM</DiaChi>
+        <DiemTichLuy>95</DiemTichLuy>
+    </KHACHHANG>
+    <KHACHHANG>
+        <MaKH>KH005</MaKH>
+        <TenKH>Hoàng Thị Lan</TenKH>
+        <SDT>0905567890</SDT>
+        <DiaChi>234 Võ Thị Sáu, Quận 3, TP.HCM</DiaChi>
+        <DiemTichLuy>180</DiemTichLuy>
+    </KHACHHANG>
+    <KHACHHANG>
+        <MaKH>KH006</MaKH>
+        <TenKH>Vũ Văn Đức</TenKH>
+        <SDT>0904678901</SDT>
+        <DiaChi>89 Lý Tự Trọng, Quận 1, TP.HCM</DiaChi>
+        <DiemTichLuy>65</DiemTichLuy>
+    </KHACHHANG>
+    <KHACHHANG>
+        <MaKH>KH007</MaKH>
+        <TenKH>Đặng Thị Thu</TenKH>
+        <SDT>0903789012</SDT>
+        <DiaChi>67 Đinh Tiên Hoàng, Quận 1, TP.HCM</DiaChi>
+        <DiemTichLuy>140</DiemTichLuy>
+    </KHACHHANG>
+
+    <!-- Thực thể NHANVIEN -->
+    <NHANVIEN>
+        <MaNV>NV001</MaNV>
+        <TenNV>Nguyễn Văn An</TenNV>
+        <NgaySinh>1990-05-15</NgaySinh>
+        <ChucVu>Quản lý</ChucVu>
+        <SDT>0903123456</SDT>
+    </NHANVIEN>
+    <NHANVIEN>
+        <MaNV>NV002</MaNV>
+        <TenNV>Trần Thị Bình</TenNV>
+        <NgaySinh>1992-08-20</NgaySinh>
+        <ChucVu>Nhân viên bán hàng</ChucVu>
+        <SDT>0903987654</SDT>
+    </NHANVIEN>
+    <NHANVIEN>
+        <MaNV>NV003</MaNV>
+        <TenNV>Lê Văn Cường</TenNV>
+        <NgaySinh>1988-12-10</NgaySinh>
+        <ChucVu>Kế toán</ChucVu>
+        <SDT>0903654321</SDT>
+    </NHANVIEN>
+    <NHANVIEN>
+        <MaNV>NV004</MaNV>
+        <TenNV>Phạm Thị Dung</TenNV>
+        <NgaySinh>1995-03-25</NgaySinh>
+        <ChucVu>Nhân viên kho</ChucVu>
+        <SDT>0903876543</SDT>
+    </NHANVIEN>
+    <NHANVIEN>
+        <MaNV>NV005</MaNV>
+        <TenNV>Hoàng Văn Em</TenNV>
+        <NgaySinh>1993-07-08</NgaySinh>
+        <ChucVu>Nhân viên bán hàng</ChucVu>
+        <SDT>0903546789</SDT>
+    </NHANVIEN>
+    <NHANVIEN>
+        <MaNV>NV006</MaNV>
+        <TenNV>Vũ Thị Phương</TenNV>
+        <NgaySinh>1991-11-30</NgaySinh>
+        <ChucVu>Thủ kho</ChucVu>
+        <SDT>0903765432</SDT>
+    </NHANVIEN>
+    <NHANVIEN>
+        <MaNV>NV007</MaNV>
+        <TenNV>Đặng Văn Giang</TenNV>
+        <NgaySinh>1989-09-18</NgaySinh>
+        <ChucVu>Quản lý kho</ChucVu>
+        <SDT>0903321654</SDT>
+    </NHANVIEN>
+
+    <!-- Thực thể PHIEUNHAP -->
+    <PHIEUNHAP>
+        <MaPhieuNhap>PN001</MaPhieuNhap>
+        <NgayNhap>2024-01-05</NgayNhap>
+        <TongTien>20000000</TongTien>
+        <MaNCC>NCC001</MaNCC>
+    </PHIEUNHAP>
+    <PHIEUNHAP>
+        <MaPhieuNhap>PN002</MaPhieuNhap>
+        <NgayNhap>2024-01-08</NgayNhap>
+        <TongTien>18000000</TongTien>
+        <MaNCC>NCC002</MaNCC>
+    </PHIEUNHAP>
+    <PHIEUNHAP>
+        <MaPhieuNhap>PN003</MaPhieuNhap>
+        <NgayNhap>2024-01-10</NgayNhap>
+        <TongTien>14000000</TongTien>
+        <MaNCC>NCC003</MaNCC>
+    </PHIEUNHAP>
+    <PHIEUNHAP>
+        <MaPhieuNhap>PN004</MaPhieuNhap>
+        <NgayNhap>2024-01-12</NgayNhap>
+        <TongTien>30000000</TongTien>
+        <MaNCC>NCC004</MaNCC>
+    </PHIEUNHAP>
+    <PHIEUNHAP>
+        <MaPhieuNhap>PN005</MaPhieuNhap>
+        <NgayNhap>2024-01-13</NgayNhap>
+        <TongTien>125000000</TongTien>
+        <MaNCC>NCC005</MaNCC>
+    </PHIEUNHAP>
+    <PHIEUNHAP>
+        <MaPhieuNhap>PN006</MaPhieuNhap>
+        <NgayNhap>2024-01-14</NgayNhap>
+        <TongTien>12000000</TongTien>
+        <MaNCC>NCC006</MaNCC>
+    </PHIEUNHAP>
+    <PHIEUNHAP>
+        <MaPhieuNhap>PN007</MaPhieuNhap>
+        <NgayNhap>2024-01-14</NgayNhap>
+        <TongTien>8000000</TongTien>
+        <MaNCC>NCC007</MaNCC>
+    </PHIEUNHAP>
+
+    <!-- Thực thể HOADONBAN -->
+    <HOADONBAN>
+        <MaHD>HD001</MaHD>
+        <NgayLap>2024-01-15</NgayLap>
+        <TongTien>740000</TongTien>
+        <MaKH>KH001</MaKH>
+        <MaNV>NV002</MaNV>
+    </HOADONBAN>
+    <HOADONBAN>
+        <MaHD>HD002</MaHD>
+        <NgayLap>2024-01-16</NgayLap>
+        <TongTien>6840000</TongTien>
+        <MaKH>KH003</MaKH>
+        <MaNV>NV005</MaNV>
+    </HOADONBAN>
+    <HOADONBAN>
+        <MaHD>HD003</MaHD>
+        <NgayLap>2024-01-17</NgayLap>
+        <TongTien>310000</TongTien>
+        <MaKH>KH002</MaKH>
+        <MaNV>NV002</MaNV>
+    </HOADONBAN>
+    <HOADONBAN>
+        <MaHD>HD004</MaHD>
+        <NgayLap>2024-01-18</NgayLap>
+        <TongTien>1245000</TongTien>
+        <MaKH>KH005</MaKH>
+        <MaNV>NV005</MaNV>
+    </HOADONBAN>
+    <HOADONBAN>
+        <MaHD>HD005</MaHD>
+        <NgayLap>2024-01-19</NgayLap>
+        <TongTien>850000</TongTien>
+        <MaKH>KH004</MaKH>
+        <MaNV>NV002</MaNV>
+    </HOADONBAN>
+    <HOADONBAN>
+        <MaHD>HD006</MaHD>
+        <NgayLap>2024-01-20</NgayLap>
+        <TongTien>450000</TongTien>
+        <MaKH>KH007</MaKH>
+        <MaNV>NV005</MaNV>
+    </HOADONBAN>
+    <HOADONBAN>
+        <MaHD>HD007</MaHD>
+        <NgayLap>2024-01-21</NgayLap>
+        <TongTien>747000</TongTien>
+        <MaKH>KH006</MaKH>
+        <MaNV>NV002</MaNV>
+    </HOADONBAN>
+
+    <!-- Thực thể CT_PHIEUNHAP -->
+    <CT_PHIEUNHAP>
+        <MaPhieuNhap>PN001</MaPhieuNhap>
+        <MaSP>SP001</MaSP>
+        <SoLuong>100</SoLuong>
+        <DonGia>200000</DonGia>
+    </CT_PHIEUNHAP>
+    <CT_PHIEUNHAP>
+        <MaPhieuNhap>PN002</MaPhieuNhap>
+        <MaSP>SP002</MaSP>
+        <SoLuong>300</SoLuong>
+        <DonGia>60000</DonGia>
+    </CT_PHIEUNHAP>
+    <CT_PHIEUNHAP>
+        <MaPhieuNhap>PN003</MaPhieuNhap>
+        <MaSP>SP003</MaSP>
+        <SoLuong>20</SoLuong>
+        <DonGia>700000</DonGia>
+    </CT_PHIEUNHAP>
+    <CT_PHIEUNHAP>
+        <MaPhieuNhap>PN004</MaPhieuNhap>
+        <MaSP>SP004</MaSP>
+        <SoLuong>500</SoLuong>
+        <DonGia>60000</DonGia>
+    </CT_PHIEUNHAP>
+    <CT_PHIEUNHAP>
+        <MaPhieuNhap>PN005</MaPhieuNhap>
+        <MaSP>SP005</MaSP>
+        <SoLuong>25</SoLuong>
+        <DonGia>5000000</DonGia>
+    </CT_PHIEUNHAP>
+    <CT_PHIEUNHAP>
+        <MaPhieuNhap>PN006</MaPhieuNhap>
+        <MaSP>SP006</MaSP>
+        <SoLuong>100</SoLuong>
+        <DonGia>120000</DonGia>
+    </CT_PHIEUNHAP>
+    <CT_PHIEUNHAP>
+        <MaPhieuNhap>PN007</MaPhieuNhap>
+        <MaSP>SP007</MaSP>
+        <SoLuong>40</SoLuong>
+        <DonGia>200000</DonGia>
+    </CT_PHIEUNHAP>
+
+    <!-- Thực thể CT_HOADONBAN -->
+    <!-- HD001: Tổng = 740,000 -->
+    <CT_HOADONBAN>
+        <MaHD>HD001</MaHD>
+        <MaSP>SP001</MaSP>
+        <SoLuong>2</SoLuong>
+        <DonGia>250000</DonGia>
+        <ThanhTien>500000</ThanhTien>
+    </CT_HOADONBAN>
+    <CT_HOADONBAN>
+        <MaHD>HD001</MaHD>
+        <MaSP>SP002</MaSP>
+        <SoLuong>3</SoLuong>
+        <DonGia>80000</DonGia>
+        <ThanhTien>240000</ThanhTien>
+    </CT_HOADONBAN>
+    
+    <!-- HD002: Tổng = 6,840,000 -->
+    <CT_HOADONBAN>
+        <MaHD>HD002</MaHD>
+        <MaSP>SP005</MaSP>
+        <SoLuong>1</SoLuong>
+        <DonGia>5990000</DonGia>
+        <ThanhTien>5990000</ThanhTien>
+    </CT_HOADONBAN>
+    <CT_HOADONBAN>
+        <MaHD>HD002</MaHD>
+        <MaSP>SP003</MaSP>
+        <SoLuong>1</SoLuong>
+        <DonGia>850000</DonGia>
+        <ThanhTien>850000</ThanhTien>
+    </CT_HOADONBAN>
+    
+    <!-- HD003: Tổng = 310,000 -->
+    <CT_HOADONBAN>
+        <MaHD>HD003</MaHD>
+        <MaSP>SP004</MaSP>
+        <SoLuong>2</SoLuong>
+        <DonGia>80000</DonGia>
+        <ThanhTien>160000</ThanhTien>
+    </CT_HOADONBAN>
+    <CT_HOADONBAN>
+        <MaHD>HD003</MaHD>
+        <MaSP>SP006</MaSP>
+        <SoLuong>1</SoLuong>
+        <DonGia>150000</DonGia>
+        <ThanhTien>150000</ThanhTien>
+    </CT_HOADONBAN>
+    
+    <!-- HD004: Tổng = 1,245,000 -->
+    <CT_HOADONBAN>
+        <MaHD>HD004</MaHD>
+        <MaSP>SP007</MaSP>
+        <SoLuong>5</SoLuong>
+        <DonGia>249000</DonGia>
+        <ThanhTien>1245000</ThanhTien>
+    </CT_HOADONBAN>
+    
+    <!-- HD005: Tổng = 850,000 -->
+    <CT_HOADONBAN>
+        <MaHD>HD005</MaHD>
+        <MaSP>SP003</MaSP>
+        <SoLuong>1</SoLuong>
+        <DonGia>850000</DonGia>
+        <ThanhTien>850000</ThanhTien>
+    </CT_HOADONBAN>
+    
+    <!-- HD006: Tổng = 450,000 -->
+    <CT_HOADONBAN>
+        <MaHD>HD006</MaHD>
+        <MaSP>SP006</MaSP>
+        <SoLuong>3</SoLuong>
+        <DonGia>150000</DonGia>
+        <ThanhTien>450000</ThanhTien>
+    </CT_HOADONBAN>
+    
+    <!-- HD007: Tổng = 747,000 -->
+    <CT_HOADONBAN>
+        <MaHD>HD007</MaHD>
+        <MaSP>SP007</MaSP>
+        <SoLuong>3</SoLuong>
+        <DonGia>249000</DonGia>
+        <ThanhTien>747000</ThanhTien>
+    </CT_HOADONBAN>
+</taphoa> 

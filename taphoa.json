@@ -1,0 +1,456 @@
+{
+  "taphoa": {
+    "NHACUNGCAP": [
+      {
+        "MaNCC": "NCC001",
+        "TenNCC": "Công ty TNHH Thực phẩm Việt Nam",
+        "DiaChi": "123 Nguyễn Văn Linh, Quận 7, TP.HCM",
+        "SDT": "02838456789",
+        "Email": "contact@thucphamviet.com"
+      },
+      {
+        "MaNCC": "NCC002",
+        "TenNCC": "Công ty CP Nước giải khát Lavie",
+        "DiaChi": "456 Lê Lợi, Quận 1, TP.HCM",
+        "SDT": "02838765432",
+        "Email": "info@lavie.com.vn"
+      },
+      {
+        "MaNCC": "NCC003",
+        "TenNCC": "Công ty TNHH Điện gia dụng Sunhouse",
+        "DiaChi": "789 Trần Hưng Đạo, Quận 5, TP.HCM",
+        "SDT": "02839281726",
+        "Email": "sales@sunhouse.com"
+      },
+      {
+        "MaNCC": "NCC004",
+        "TenNCC": "Công ty CP Văn phòng phẩm Thiên Long",
+        "DiaChi": "321 Cách Mạng Tháng 8, Quận 3, TP.HCM",
+        "SDT": "02835463728",
+        "Email": "office@thienlong.com"
+      },
+      {
+        "MaNCC": "NCC005",
+        "TenNCC": "Công ty TNHH Điện tử Sony Việt Nam",
+        "DiaChi": "654 Nguyễn Tri Phương, Quận 10, TP.HCM",
+        "SDT": "02837654891",
+        "Email": "support@sony.com.vn"
+      },
+      {
+        "MaNCC": "NCC006",
+        "TenNCC": "Công ty CP Thời trang Việt",
+        "DiaChi": "987 Lý Thường Kiệt, Quận 11, TP.HCM",
+        "SDT": "02836547892",
+        "Email": "fashion@vietfashion.com"
+      },
+      {
+        "MaNCC": "NCC007",
+        "TenNCC": "Công ty TNHH Mỹ phẩm Maybelline",
+        "DiaChi": "147 Phạm Văn Đồng, Thủ Đức, TP.HCM",
+        "SDT": "02838910283",
+        "Email": "beauty@maybelline.com.vn"
+      }
+    ],
+    "DANHMUC": [
+      {
+        "MaDanhMuc": "DM001",
+        "TenDanhMuc": "Thực phẩm"
+      },
+      {
+        "MaDanhMuc": "DM002",
+        "TenDanhMuc": "Đồ uống"
+      },
+      {
+        "MaDanhMuc": "DM003",
+        "TenDanhMuc": "Điện gia dụng"
+      },
+      {
+        "MaDanhMuc": "DM004",
+        "TenDanhMuc": "Văn phòng phẩm"
+      },
+      {
+        "MaDanhMuc": "DM005",
+        "TenDanhMuc": "Điện tử"
+      },
+      {
+        "MaDanhMuc": "DM006",
+        "TenDanhMuc": "Thời trang"
+      },
+      {
+        "MaDanhMuc": "DM007",
+        "TenDanhMuc": "Mỹ phẩm"
+      }
+    ],
+    "SANPHAM": [
+      {
+        "MaSP": "SP001",
+        "TenSanPham": "Gạo ST25 5kg",
+        "DonViTinh": "Bao",
+        "GiaBan": 250000,
+        "SoLuongTon": 150,
+        "MaDanhMuc": "DM001"
+      },
+      {
+        "MaSP": "SP002",
+        "TenSanPham": "Nước suối Lavie 500ml",
+        "DonViTinh": "Thùng",
+        "GiaBan": 80000,
+        "SoLuongTon": 500,
+        "MaDanhMuc": "DM002"
+      },
+      {
+        "MaSP": "SP003",
+        "TenSanPham": "Nồi cơm điện Sunhouse 1.8L",
+        "DonViTinh": "Cái",
+        "GiaBan": 850000,
+        "SoLuongTon": 45,
+        "MaDanhMuc": "DM003"
+      },
+      {
+        "MaSP": "SP004",
+        "TenSanPham": "Bút bi Thiên Long 027",
+        "DonViTinh": "Hộp",
+        "GiaBan": 80000,
+        "SoLuongTon": 1000,
+        "MaDanhMuc": "DM004"
+      },
+      {
+        "MaSP": "SP005",
+        "TenSanPham": "Tai nghe Bluetooth Sony WH-1000XM4",
+        "DonViTinh": "Cái",
+        "GiaBan": 5990000,
+        "SoLuongTon": 35,
+        "MaDanhMuc": "DM005"
+      },
+      {
+        "MaSP": "SP006",
+        "TenSanPham": "Áo thun nam cổ tròn",
+        "DonViTinh": "Cái",
+        "GiaBan": 150000,
+        "SoLuongTon": 120,
+        "MaDanhMuc": "DM006"
+      },
+      {
+        "MaSP": "SP007",
+        "TenSanPham": "Son kem lì Maybelline Superstay",
+        "DonViTinh": "Thỏi",
+        "GiaBan": 249000,
+        "SoLuongTon": 80,
+        "MaDanhMuc": "DM007"
+      }
+    ],
+    "KHACHHANG": [
+      {
+        "MaKH": "KH001",
+        "TenKH": "Nguyễn Thị Mai",
+        "SDT": "0908123456",
+        "DiaChi": "12 Lê Văn Việt, Quận 9, TP.HCM",
+        "DiemTichLuy": 120
+      },
+      {
+        "MaKH": "KH002",
+        "TenKH": "Trần Văn Nam",
+        "SDT": "0909234567",
+        "DiaChi": "45 Hoàng Diệu, Quận 4, TP.HCM",
+        "DiemTichLuy": 85
+      },
+      {
+        "MaKH": "KH003",
+        "TenKH": "Lê Thị Hoa",
+        "SDT": "0907345678",
+        "DiaChi": "78 Phan Văn Trị, Gò Vấp, TP.HCM",
+        "DiemTichLuy": 250
+      },
+      {
+        "MaKH": "KH004",
+        "TenKH": "Phạm Minh Tuấn",
+        "SDT": "0906456789",
+        "DiaChi": "156 Nguyễn Thị Minh Khai, Quận 3, TP.HCM",
+        "DiemTichLuy": 95
+      },
+      {
+        "MaKH": "KH005",
+        "TenKH": "Hoàng Thị Lan",
+        "SDT": "0905567890",
+        "DiaChi": "234 Võ Thị Sáu, Quận 3, TP.HCM",
+        "DiemTichLuy": 180
+      },
+      {
+        "MaKH": "KH006",
+        "TenKH": "Vũ Văn Đức",
+        "SDT": "0904678901",
+        "DiaChi": "89 Lý Tự Trọng, Quận 1, TP.HCM",
+        "DiemTichLuy": 65
+      },
+      {
+        "MaKH": "KH007",
+        "TenKH": "Đặng Thị Thu",
+        "SDT": "0903789012",
+        "DiaChi": "67 Đinh Tiên Hoàng, Quận 1, TP.HCM",
+        "DiemTichLuy": 140
+      }
+    ],
+    "NHANVIEN": [
+      {
+        "MaNV": "NV001",
+        "TenNV": "Nguyễn Văn An",
+        "NgaySinh": "1990-05-15",
+        "ChucVu": "Quản lý",
+        "SDT": "0903123456"
+      },
+      {
+        "MaNV": "NV002",
+        "TenNV": "Trần Thị Bình",
+        "NgaySinh": "1992-08-20",
+        "ChucVu": "Nhân viên bán hàng",
+        "SDT": "0903987654"
+      },
+      {
+        "MaNV": "NV003",
+        "TenNV": "Lê Văn Cường",
+        "NgaySinh": "1988-12-10",
+        "ChucVu": "Kế toán",
+        "SDT": "0903654321"
+      },
+      {
+        "MaNV": "NV004",
+        "TenNV": "Phạm Thị Dung",
+        "NgaySinh": "1995-03-25",
+        "ChucVu": "Nhân viên kho",
+        "SDT": "0903876543"
+      },
+      {
+        "MaNV": "NV005",
+        "TenNV": "Hoàng Văn Em",
+        "NgaySinh": "1993-07-08",
+        "ChucVu": "Nhân viên bán hàng",
+        "SDT": "0903546789"
+      },
+      {
+        "MaNV": "NV006",
+        "TenNV": "Vũ Thị Phương",
+        "NgaySinh": "1991-11-30",
+        "ChucVu": "Thủ kho",
+        "SDT": "0903765432"
+      },
+      {
+        "MaNV": "NV007",
+        "TenNV": "Đặng Văn Giang",
+        "NgaySinh": "1989-09-18",
+        "ChucVu": "Quản lý kho",
+        "SDT": "0903321654"
+      }
+    ],
+    "PHIEUNHAP": [
+      {
+        "MaPhieuNhap": "PN001",
+        "NgayNhap": "2024-01-05",
+        "TongTien": 20000000,
+        "MaNCC": "NCC001"
+      },
+      {
+        "MaPhieuNhap": "PN002",
+        "NgayNhap": "2024-01-08",
+        "TongTien": 18000000,
+        "MaNCC": "NCC002"
+      },
+      {
+        "MaPhieuNhap": "PN003",
+        "NgayNhap": "2024-01-10",
+        "TongTien": 14000000,
+        "MaNCC": "NCC003"
+      },
+      {
+        "MaPhieuNhap": "PN004",
+        "NgayNhap": "2024-01-12",
+        "TongTien": 30000000,
+        "MaNCC": "NCC004"
+      },
+      {
+        "MaPhieuNhap": "PN005",
+        "NgayNhap": "2024-01-13",
+        "TongTien": 125000000,
+        "MaNCC": "NCC005"
+      },
+      {
+        "MaPhieuNhap": "PN006",
+        "NgayNhap": "2024-01-14",
+        "TongTien": 12000000,
+        "MaNCC": "NCC006"
+      },
+      {
+        "MaPhieuNhap": "PN007",
+        "NgayNhap": "2024-01-14",
+        "TongTien": 8000000,
+        "MaNCC": "NCC007"
+      }
+    ],
+    "HOADONBAN": [
+      {
+        "MaHD": "HD001",
+        "NgayLap": "2024-01-15",
+        "TongTien": 740000,
+        "MaKH": "KH001",
+        "MaNV": "NV002"
+      },
+      {
+        "MaHD": "HD002",
+        "NgayLap": "2024-01-16",
+        "TongTien": 6840000,
+        "MaKH": "KH003",
+        "MaNV": "NV005"
+      },
+      {
+        "MaHD": "HD003",
+        "NgayLap": "2024-01-17",
+        "TongTien": 310000,
+        "MaKH": "KH002",
+        "MaNV": "NV002"
+      },
+      {
+        "MaHD": "HD004",
+        "NgayLap": "2024-01-18",
+        "TongTien": 1245000,
+        "MaKH": "KH005",
+        "MaNV": "NV005"
+      },
+      {
+        "MaHD": "HD005",
+        "NgayLap": "2024-01-19",
+        "TongTien": 850000,
+        "MaKH": "KH004",
+        "MaNV": "NV002"
+      },
+      {
+        "MaHD": "HD006",
+        "NgayLap": "2024-01-20",
+        "TongTien": 450000,
+        "MaKH": "KH007",
+        "MaNV": "NV005"
+      },
+      {
+        "MaHD": "HD007",
+        "NgayLap": "2024-01-21",
+        "TongTien": 747000,
+        "MaKH": "KH006",
+        "MaNV": "NV002"
+      }
+    ],
+    "CT_PHIEUNHAP": [
+      {
+        "MaPhieuNhap": "PN001",
+        "MaSP": "SP001",
+        "SoLuong": 100,
+        "DonGia": 200000
+      },
+      {
+        "MaPhieuNhap": "PN002",
+        "MaSP": "SP002",
+        "SoLuong": 300,
+        "DonGia": 60000
+      },
+      {
+        "MaPhieuNhap": "PN003",
+        "MaSP": "SP003",
+        "SoLuong": 20,
+        "DonGia": 700000
+      },
+      {
+        "MaPhieuNhap": "PN004",
+        "MaSP": "SP004",
+        "SoLuong": 500,
+        "DonGia": 60000
+      },
+      {
+        "MaPhieuNhap": "PN005",
+        "MaSP": "SP005",
+        "SoLuong": 25,
+        "DonGia": 5000000
+      },
+      {
+        "MaPhieuNhap": "PN006",
+        "MaSP": "SP006",
+        "SoLuong": 100,
+        "DonGia": 120000
+      },
+      {
+        "MaPhieuNhap": "PN007",
+        "MaSP": "SP007",
+        "SoLuong": 40,
+        "DonGia": 200000
+      }
+    ],
+    "CT_HOADONBAN": [
+      {
+        "MaHD": "HD001",
+        "MaSP": "SP001",
+        "SoLuong": 2,
+        "DonGia": 250000,
+        "ThanhTien": 500000
+      },
+      {
+        "MaHD": "HD001",
+        "MaSP": "SP002",
+        "SoLuong": 3,
+        "DonGia": 80000,
+        "ThanhTien": 240000
+      },
+      {
+        "MaHD": "HD002",
+        "MaSP": "SP005",
+        "SoLuong": 1,
+        "DonGia": 5990000,
+        "ThanhTien": 5990000
+      },
+      {
+        "MaHD": "HD002",
+        "MaSP": "SP003",
+        "SoLuong": 1,
+        "DonGia": 850000,
+        "ThanhTien": 850000
+      },
+      {
+        "MaHD": "HD003",
+        "MaSP": "SP004",
+        "SoLuong": 2,
+        "DonGia": 80000,
+        "ThanhTien": 160000
+      },
+      {
+        "MaHD": "HD003",
+        "MaSP": "SP006",
+        "SoLuong": 1,
+        "DonGia": 150000,
+        "ThanhTien": 150000
+      },
+      {
+        "MaHD": "HD004",
+        "MaSP": "SP007",
+        "SoLuong": 5,
+        "DonGia": 249000,
+        "ThanhTien": 1245000
+      },
+      {
+        "MaHD": "HD005",
+        "MaSP": "SP003",
+        "SoLuong": 1,
+        "DonGia": 850000,
+        "ThanhTien": 850000
+      },
+      {
+        "MaHD": "HD006",
+        "MaSP": "SP006",
+        "SoLuong": 3,
+        "DonGia": 150000,
+        "ThanhTien": 450000
+      },
+      {
+        "MaHD": "HD007",
+        "MaSP": "SP007",
+        "SoLuong": 3,
+        "DonGia": 249000,
+        "ThanhTien": 747000
+      }
+    ]
+  }
+}
