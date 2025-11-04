@@ -24,7 +24,7 @@
         "NHACUNGCAP": {
           "type": "array",
           "description": "Danh sách nhà cung cấp",
-          "minItems": 1,
+          "minItems": 0,
           "items": {
             "type": "object",
             "required": ["MaNCC", "TenNCC", "DiaChi", "SDT", "Email"],
@@ -94,7 +94,7 @@
         "SANPHAM": {
           "type": "array",
           "description": "Danh sách sản phẩm",
-          "minItems": 1,
+          "minItems": 0,
           "items": {
             "type": "object",
             "required": ["MaSP", "TenSanPham", "DonViTinh", "GiaBan", "SoLuongTon", "MaDanhMuc"],
@@ -147,7 +147,7 @@
         "KHACHHANG": {
           "type": "array",
           "description": "Danh sách khách hàng",
-          "minItems": 1,
+          "minItems": 0,
           "items": {
             "type": "object",
             "required": ["MaKH", "TenKH", "SDT", "DiaChi", "DiemTichLuy"],
@@ -237,7 +237,7 @@
         "PHIEUNHAP": {
           "type": "array",
           "description": "Danh sách phiếu nhập hàng",
-          "minItems": 1,
+          "minItems": 0,
           "items": {
             "type": "object",
             "required": ["MaPhieuNhap", "NgayNhap", "TongTien", "MaNCC"],
@@ -277,7 +277,7 @@
         "HOADONBAN": {
           "type": "array",
           "description": "Danh sách hóa đơn bán hàng",
-          "minItems": 1,
+          "minItems": 0,
           "items": {
             "type": "object",
             "required": ["MaHD", "NgayLap", "TongTien", "MaKH", "MaNV"],
@@ -324,7 +324,7 @@
         "CT_PHIEUNHAP": {
           "type": "array",
           "description": "Chi tiết phiếu nhập hàng",
-          "minItems": 1,
+          "minItems": 0,
           "items": {
             "type": "object",
             "required": ["MaPhieuNhap", "MaSP", "SoLuong", "DonGia"],
@@ -364,7 +364,7 @@
         "CT_HOADONBAN": {
           "type": "array",
           "description": "Chi tiết hóa đơn bán hàng",
-          "minItems": 1,
+          "minItems": 0,
           "items": {
             "type": "object",
             "required": ["MaHD", "MaSP", "SoLuong", "DonGia", "ThanhTien"],
@@ -412,47 +412,5 @@
       "additionalProperties": false
     }
   },
-  "additionalProperties": false,
-  "definitions": {
-    "MaType": {
-      "description": "Kiểu dữ liệu cho các mã định danh",
-      "type": "string",
-      "minLength": 3,
-      "maxLength": 10
-    },
-    "TenType": {
-      "description": "Kiểu dữ liệu cho tên",
-      "type": "string",
-      "minLength": 3,
-      "maxLength": 50
-    },
-    "SDTType": {
-      "description": "Kiểu dữ liệu cho số điện thoại (10 chữ số bắt đầu bằng 0)",
-      "type": "string",
-      "pattern": "^0[0-9]{9}$"
-    },
-    "EmailType": {
-      "description": "Kiểu dữ liệu cho email",
-      "type": "string",
-      "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
-    },
-    "GiaType": {
-      "description": "Kiểu dữ liệu cho giá tiền (VNĐ) - từ 1,000 đến 1 tỷ",
-      "type": "number",
-      "minimum": 1000,
-      "maximum": 1000000000
-    },
-    "SoLuongType": {
-      "description": "Kiểu dữ liệu cho số lượng - từ 0 đến 10,000",
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 10000
-    },
-    "DateType": {
-      "description": "Kiểu dữ liệu cho ngày tháng (YYYY-MM-DD)",
-      "type": "string",
-      "format": "date",
-      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
-    }
-  }
+  "additionalProperties": false
 }
